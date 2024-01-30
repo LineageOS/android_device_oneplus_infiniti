@@ -46,6 +46,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(r'(fdSupport += )TRUE;', r'\1FALSE;'),
     'odm/etc/init/init.camera_process.rc': blob_fixup()
         .regex_replace('    delete_recursion', '    #delete_recursion'),
+    'odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini': blob_fixup()
+        .regex_replace(r'(wlm_latency_flags_ultralow =)0x180c83', r'\g<1>0x180c82'),
     (
         'odm/etc/libnfc-mtp-SN220.conf_24831',
         'odm/etc/libnfc-mtp-SN220.conf_24863',

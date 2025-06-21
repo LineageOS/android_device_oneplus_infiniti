@@ -46,6 +46,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare-service.oplus
 
+# Recovery
+$(call soong_config_set_bool,recovery,target_recovery_uses_qti_drm,true)
+
 # Regional properties
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/vendor/odm/etc/24831/build.default.prop:$(TARGET_COPY_OUT_ODM)/etc/24831/build.default.prop \

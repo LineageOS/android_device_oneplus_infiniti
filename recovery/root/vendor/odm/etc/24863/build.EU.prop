@@ -1,0 +1,5 @@
+# Device info
+ro.product.odm.model=CPH2747
+ro.product.odm.name=CPH2747EEA
+ro.vendor.oplus.regionmark=EUEX
+ro.vendor.oplus.radio.sar_regionmark=EUEX

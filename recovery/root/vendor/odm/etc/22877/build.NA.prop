@@ -1,6 +1,0 @@
-# Device info
-ro.product.odm.model=CPH2583
-ro.product.odm.name=CPH2583
-
-# eSIM
-ro.vendor.oplus.radio.esim.feature=2

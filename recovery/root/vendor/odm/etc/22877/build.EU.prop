@@ -1,8 +1,0 @@
-# Device info
-ro.product.odm.model=CPH2581
-ro.product.odm.name=CPH2581EEA
-ro.vendor.oplus.radio.sar_regionmark=EUEX
-ro.vendor.oplus.regionmark=EUEX
-
-# eSIM
-ro.vendor.oplus.radio.esim.feature=2

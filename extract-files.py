@@ -19,8 +19,8 @@ from extract_utils.main import (
 
 namespace_imports = [
     'hardware/oplus',
-    'hardware/qcom-caf/sm8650',
-    'vendor/oneplus/sm8650-common',
+    'hardware/qcom-caf/sm8850',
+    'vendor/oneplus/sm8850-common',
     'vendor/qcom/opensource/commonsys-intf/display',
 ]
 
@@ -108,7 +108,7 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'waffle',
+    'infiniti',
     'oneplus',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
@@ -118,6 +118,6 @@ module = ExtractUtilsModule(
 
 if __name__ == '__main__':
     utils = ExtractUtils.device_with_common(
-        module, 'sm8650-common', module.vendor
+        module, 'sm8850-common', module.vendor
     )
     utils.run()

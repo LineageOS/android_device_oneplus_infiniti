@@ -19,12 +19,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 3216
-TARGET_SCREEN_WIDTH := 1440
+TARGET_SCREEN_HEIGHT := 2772
+TARGET_SCREEN_WIDTH := 1272
 
 # Display
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946450791512195.xml
+    $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946982335253651.xml
 
 # Keymint
 PRODUCT_PACKAGES += \
@@ -39,8 +39,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
-    FrameworksResEuicc_EU \
-    FrameworksResEuicc_NA \
+    FrameworksResEuicc \
     KeyHandlerResTarget \
     OPlusFrameworksResTarget \
     OPlusSettingsProviderResTarget \
@@ -54,11 +53,12 @@ PRODUCT_PACKAGES += \
 
 # Regional properties
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/22825/build.default.prop:$(TARGET_COPY_OUT_ODM)/etc/22825/build.default.prop \
-    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/22877/build.EU.prop:$(TARGET_COPY_OUT_ODM)/etc/22877/build.EU.prop \
-    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/22877/build.IN.prop:$(TARGET_COPY_OUT_ODM)/etc/22877/build.IN.prop \
-    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/22877/build.NA.prop:$(TARGET_COPY_OUT_ODM)/etc/22877/build.NA.prop \
-    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/22877/build.default.prop:$(TARGET_COPY_OUT_ODM)/etc/22877/build.default.prop
+    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/24831/build.default.prop:$(TARGET_COPY_OUT_ODM)/etc/24831/build.default.prop \
+    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/24863/build.EU.prop:$(TARGET_COPY_OUT_ODM)/etc/24863/build.EU.prop \
+    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/24863/build.IN.prop:$(TARGET_COPY_OUT_ODM)/etc/24863/build.IN.prop \
+    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/24863/build.NA.prop:$(TARGET_COPY_OUT_ODM)/etc/24863/build.NA.prop \
+    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/24863/build.ROW.prop:$(TARGET_COPY_OUT_ODM)/etc/24863/build.ROW.prop \
+    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/24863/build.default.prop:$(TARGET_COPY_OUT_ODM)/etc/24863/build.default.prop
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -80,7 +80,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
 
 $(call soong_config_set_bool,qti_vibrator,use_effect_stream,true)
-$(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.oplus.waffle)
+$(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.oplus.infiniti)
 
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
@@ -88,7 +88,7 @@ PRODUCT_PACKAGES += \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
 # Inherit from the common OEM chipset makefile.
-$(call inherit-product, device/oneplus/sm8650-common/common.mk)
+$(call inherit-product, device/oneplus/sm8850-common/common.mk)
 
 # Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/oneplus/waffle/waffle-vendor.mk)
+$(call inherit-product, vendor/oneplus/infiniti/infiniti-vendor.mk)

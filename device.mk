@@ -64,6 +64,7 @@ PRODUCT_PACKAGES += \
     OplusEuicc
 
 PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.euicc.mep.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.mep.xml \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
 
 # Touch features
@@ -75,11 +76,6 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set_bool,qti_vibrator,use_effect_stream,true)
 $(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.oplus.infiniti)
-
-# WiFi firmware symlinks
-PRODUCT_PACKAGES += \
-    firmware_wlan_mac.bin_symlink \
-    firmware_WCNSS_qcom_cfg.ini_symlink
 
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8850-common/common.mk)

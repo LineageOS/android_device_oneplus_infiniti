@@ -32,23 +32,7 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
-        'com.qti.sensor.lyt808',
-        'libarcsoft_triple_sat',
-        'libarcsoft_triple_zoomtranslator',
-        'libdualcam_optical_zoom_control',
-        'libdualcam_video_optical_zoom',
-        'libhwconfigurationutil',
-        'libpwirisfeature',
-        'libpwirishalwrapper',
-        'libtriplecam_optical_zoom_control',
-        'libtriplecam_video_optical_zoom',
-        'vendor.pixelworks.hardware.display-V2-ndk',
-        'vendor.pixelworks.hardware.display@1.0',
-        'vendor.pixelworks.hardware.display@1.1',
-        'vendor.pixelworks.hardware.display@1.2',
-        'vendor.pixelworks.hardware.feature-V1-ndk',
-        'vendor.pixelworks.hardware.feature@1.0',
-        'vendor.pixelworks.hardware.feature@1.1',
+        'libhcsutils',
     ): lib_fixup_vendor_suffix,
 }
 
@@ -56,55 +40,50 @@ blob_fixups: blob_fixups_user_type = {
     'odm/etc/camera/CameraHWConfiguration.config': blob_fixup()
         # Disable face detection AE behaviour
         .regex_replace(r'(enableSWfdForThirdCamUnit += )TRUE', r'\1FALSE')
-        .regex_replace(r'(fdSupport += )TRUE;', r'\1FALSE;')
-        # Expose AUX cameras
-        .regex_replace('SystemCamera =  0;  0;  0;  1;  0; 1;', 'SystemCamera =  0;  0;  0;  0;  0; 0;'),
+        .regex_replace(r'(fdSupport += )TRUE;', r'\1FALSE;'),
+    'odm/etc/init/init.camera_process.rc': blob_fixup()
+        .regex_replace('    delete_recursion', '    #delete_recursion'),
     (
-        'odm/etc/libnfc-mtp-SN220.conf_22825',
-        'odm/etc/libnfc-mtp-SN220.conf_22877',
+        'odm/etc/libnfc-mtp-SN220.conf_24831',
+        'odm/etc/libnfc-mtp-SN220.conf_24863',
     ): blob_fixup()
         .regex_replace('(NXPLOG_.*_LOGLEVEL)=0x03', '\\1=0x02')
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
-    'odm/lib64/libAlgoProcess.so': blob_fixup()
-        .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V7-ndk.so')
-        .replace_needed('android.hardware.graphics.common-V4-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
-    'odm/lib64/libarcsoft_high_dynamic_range_v4.so': blob_fixup()
-        .clear_symbol_version('remote_handle_close')
-        .clear_symbol_version('remote_handle_invoke')
-        .clear_symbol_version('remote_handle_open')
-        .clear_symbol_version('remote_register_buf')
-        .clear_symbol_version('remote_register_buf_attr'),
     (
-        'odm/lib64/libCOppLceTonemapAPI.so',
-        'odm/lib64/libSuperRaw.so',
-        'odm/lib64/libYTCommon.so',
-        'odm/lib64/libyuv2.so',
-    ): blob_fixup()
-        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
-    (
-        'odm/lib64/libdisplaycolorfeature.so',
-        'odm/lib64/libdisplayfossfeature_nature.so',
-        'vendor/bin/hw/vendor.qti.hardware.display.composer-service',
-        'vendor/lib64/libdpps.so',
-        'vendor/lib64/libsnapdragoncolor-manager.so',
-    ): blob_fixup()
-        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
-    (
+        'odm/lib64/libAlgoProcess.so',
         'odm/lib64/libEIS.so',
         'odm/lib64/libEISLive.so',
-        'odm/lib64/libHIS.so',
-        'odm/lib64/libOGLManager.so',
+        'odm/lib64/libFaceBeautyJni.so',
+        'odm/lib64/libFaceDistortionCorrection.so',
+        'odm/lib64/libOPAlgoCamAiBeautyFaceRetouchCn.so',
+        'odm/lib64/libOPAlgoCamAiUnifySkin.so',
         'odm/lib64/libOPAlgoCamFaceBeautyCap.so',
+        'odm/lib64/libaiboost_te.so',
     ): blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_acquire')
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('AHardwareBuffer_describe')
         .clear_symbol_version('AHardwareBuffer_lock')
+        .clear_symbol_version('AHardwareBuffer_lockPlanes')
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
+    'odm/lib64/libAlgoProcess.so': blob_fixup()
+        .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
+    'odm/lib64/liboprec_audrec.so': blob_fixup()
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'vendor/etc/libnfc-nci.conf': blob_fixup()
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
-    'vendor/lib64/libcwb_qcom_aidl.so': blob_fixup()
-        .add_needed('libui_shim.so'),
+    (
+        'vendor/lib64/camera/components/com.qti.node.dewarp.so',
+        'vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so',
+    ): blob_fixup()
+        .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so'),
+    (
+        'vendor/lib64/camera/components/com.qti.node.fd.so',
+        'vendor/lib64/hw/camera.qcom.core.so',
+        'vendor/lib64/libcamxdumpinforecorder.so',
+    ): blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v36.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

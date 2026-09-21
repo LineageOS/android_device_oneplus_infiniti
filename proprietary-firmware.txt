@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 12 (CPH2573_16.0.9.400(EX01)).
+## are from OnePlus 15 (CPH2745_16.0.10.500(EX01)).
 
 abl.img;AB
 aop.img;AB
@@ -12,17 +12,32 @@ dsp.img;AB
 engineering_cdt.img;AB
 featenabler.img;AB
 hyp.img;AB
+hyp_ac_config.img;AB
 imagefv.img;AB
 keymaster.img;AB
 modem.img;AB
+multiimgoem.img;AB
+multiimgqti.img;AB
 oplus_sec.img;AB
-oplusstanvbk.img;AB
+pdp.img;AB
+pdp_cdb.img;AB
 qupfw.img;AB
+secretkeeper.img;AB
 shrm.img;AB
+soccp.img;AB
+soccp_dcd.img;AB
+soccp_debug.img;AB
 splash.img;AB
+spuservice.img;AB
+tme_config.img;AB
+tme_fw.img;AB
+tme_seq_patch.img;AB
 tz.img;AB
+tz_ac_config.img;AB
+tz_qti_config.img;AB
 uefi.img;AB
 uefisecapp.img;AB
 xbl.img;AB
+xbl_ac_config.img;AB
 xbl_config.img;AB
 xbl_ramdump.img;AB

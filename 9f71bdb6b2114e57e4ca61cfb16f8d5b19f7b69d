@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5d61bd8_76e6274f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-09-21T16:32:01Z",
+      "side": 1,
+      "message": "https://review.lineageos.org/c/LineageOS/android_device_oneplus_infiniti/+/504191 kills this change.",
+      "revId": "9f71bdb6b2114e57e4ca61cfb16f8d5b19f7b69d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}

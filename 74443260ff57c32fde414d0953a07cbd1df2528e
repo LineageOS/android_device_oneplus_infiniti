@@ -16,6 +16,24 @@
       "message": "5-\u003e14; forgot to update commit msg",
       "revId": "74443260ff57c32fde414d0953a07cbd1df2528e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4e988fe_a35b305f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-09-26T20:11:50Z",
+      "side": 1,
+      "message": "ah nvm, you actually made it use 5...does it do 330Hz on your end?",
+      "parentUuid": "a4529016_fe631e55",
+      "revId": "74443260ff57c32fde414d0953a07cbd1df2528e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }

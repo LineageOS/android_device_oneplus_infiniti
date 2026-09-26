@@ -34,6 +34,24 @@
       "parentUuid": "a4529016_fe631e55",
       "revId": "74443260ff57c32fde414d0953a07cbd1df2528e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ec1abf3_5e79ad1a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 30975
+      },
+      "writtenOn": "2026-09-26T20:26:36Z",
+      "side": 1,
+      "message": "oh, 5 gives ~300 Hz, and 14 gives ~320 Hz on my device",
+      "parentUuid": "c4e988fe_a35b305f",
+      "revId": "74443260ff57c32fde414d0953a07cbd1df2528e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }

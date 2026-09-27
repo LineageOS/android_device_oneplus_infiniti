@@ -46,6 +46,30 @@
       },
       "revId": "0469e1b68052e68684bcfd0d810a42b0b06fe920",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c080df9b_5e03e86b",
+        "filename": "overlay-lineage/packages/apps/Aperture/app/src/main/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 30975
+      },
+      "writtenOn": "2026-09-27T09:58:58Z",
+      "side": 1,
+      "message": "Discussed on Discord. Marking this as resolved",
+      "parentUuid": "60c99f7c_b0f5922b",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 19
+      },
+      "revId": "0469e1b68052e68684bcfd0d810a42b0b06fe920",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }

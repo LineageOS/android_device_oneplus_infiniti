@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3ac6146d_f7e49767",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 30975
+      },
+      "writtenOn": "2026-09-27T07:01:54Z",
+      "side": 1,
+      "message": "I think it\u0027s better to override in init.target.rc.",
+      "revId": "9bd72e3c5903511d04e3b42d45cd0d63df5d5b80",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}

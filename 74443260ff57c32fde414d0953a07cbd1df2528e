@@ -52,6 +52,24 @@
       "parentUuid": "c4e988fe_a35b305f",
       "revId": "74443260ff57c32fde414d0953a07cbd1df2528e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "24112eef_d6488c3f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 30975
+      },
+      "writtenOn": "2026-09-27T10:02:02Z",
+      "side": 1,
+      "message": "Updated the value to 14, which gives ~320 Hz on my device",
+      "parentUuid": "5ec1abf3_5e79ad1a",
+      "revId": "74443260ff57c32fde414d0953a07cbd1df2528e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }

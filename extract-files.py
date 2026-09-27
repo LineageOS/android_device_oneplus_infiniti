@@ -71,6 +71,11 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
     'odm/lib64/liboprec_audrec.so': blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    'vendor/etc/init/vendor.qti.camera.provider-service_64.rc': blob_fixup()
+        .regex_replace(
+            r'(    class hal\n)(?!    setenv ADSP_LIBRARY_PATH )',
+            r'\1    setenv ADSP_LIBRARY_PATH /odm/lib/rfsa/adsp;/vendor/lib64/rfs/dsp;/vendor/lib/rfsa/adsp;/vendor/lib/rfsa/dsp;/vendor/dsp\n',
+        ),
     'vendor/etc/libnfc-nci.conf': blob_fixup()
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
     (

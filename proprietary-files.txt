@@ -1659,7 +1659,7 @@ vendor/etc/spr_cfg_AD296_P_3_A0020_dsc_cmd_mode_panel.xml
 # Dolby Vision
 odm/etc/dolby/display/dolby_vision.cfg
 odm/etc/dolby/dolby_vision.cfg
-odm/etc/media_codecs_dolby_vision.xml
+odm/etc/media_codecs_dolby_vision.xml:vendor/etc/media_codecs_dolby_vision.xml
 odm/lib64/libdolbyclstc.so
 
 # DSP modules

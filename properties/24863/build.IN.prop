@@ -2,3 +2,6 @@
 ro.product.odm.name=CPH2745IN
 ro.vendor.oplus.regionmark=IN
 ro.vendor.oplus.radio.sar_regionmark=IN
+
+# Key attestation
+ro.product.name_for_attestation=CPH2745IN

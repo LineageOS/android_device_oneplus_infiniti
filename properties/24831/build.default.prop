@@ -4,5 +4,10 @@ ro.product.odm.model=PLK110
 ro.product.odm.name=PLK110
 ro.vendor.oplus.regionmark=CN
 
+# Key attestation
+ro.product.device_for_attestation=OP60FFL1
+ro.product.model_for_attestation=PLK110
+ro.product.name_for_attestation=PLK110
+
 # NFC
 persist.vendor.nfc.config_file_name=libnfc-mtp-SN220.conf_24831

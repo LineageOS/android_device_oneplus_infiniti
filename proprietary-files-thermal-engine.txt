@@ -1,0 +1,6 @@
+## All proprietary files from this list, unless pinned and noted otherwise,
+## are from OnePlus 15 (CPH2745_16.0.10.601(EX01)).
+
+odm/etc/temperature_profile/sys_thermal_control_config.xml
+system_ext/etc/horae/horae.conf;EXTRACT_ONLY
+vendor/etc/thermal-engine.conf

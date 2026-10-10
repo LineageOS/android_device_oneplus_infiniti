@@ -48,8 +48,8 @@
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">750</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">800</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">1200</integer>
 
     <!-- The maximum range of gamma adjustment possible using the screen
          auto-brightness adjustment setting. -->
@@ -180,14 +180,7 @@
          value < level[0]                0
          level[n] <= value < level[n+1]  n+1
          level[MAX] <= value             MAX+1 -->
-    <integer-array name="config_ambientThresholdLevels">
-        <item>50</item>
-        <item>150</item>
-        <item>500</item>
-        <item>1000</item>
-        <item>2000</item>
-        <item>4000</item>
-    </integer-array>
+    <integer-array name="config_ambientThresholdLevels" />
 
     <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
          percent. The length of this array is assumed to be one greater than
@@ -196,13 +189,7 @@
          the screen brightness is recalculated. See the config_ambientThresholdLevels
          description for how the constraint value is chosen. -->
     <integer-array name="config_ambientBrighteningThresholds">
-        <item>5000</item> <!--     0 - 50    -->
-        <item>1500</item> <!--    50 - 150   -->
-        <item>750</item>  <!--   150 - 500   -->
-        <item>600</item>  <!--   500 - 1000  -->
-        <item>500</item>  <!--  1000 - 2000  -->
-        <item>500</item>  <!--  2000 - 4000  -->
-        <item>500</item>  <!--     4000+     -->
+        <item>100</item>
     </integer-array>
 
     <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
@@ -212,13 +199,7 @@
          the screen brightness is recalculated. See the config_ambientThresholdLevels
          description for how the constraint value is chosen. -->
     <integer-array name="config_ambientDarkeningThresholds">
-        <item>500</item>  <!--     0 - 50    -->
-        <item>500</item>  <!--    50 - 150   -->
-        <item>450</item>  <!--   150 - 500   -->
-        <item>500</item>  <!--   500 - 1000  -->
-        <item>500</item>  <!--  1000 - 2000  -->
-        <item>500</item>  <!--  2000 - 4000  -->
-        <item>500</item>  <!--     4000+     -->
+        <item>200</item>
     </integer-array>
 
     <!-- Array of hysteresis constraint values for brightening, represented as tenths of a

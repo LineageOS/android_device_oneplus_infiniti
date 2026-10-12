@@ -262,7 +262,18 @@
 
     <highBrightnessMode enabled="true">
         <transitionPoint>0.858539</transitionPoint>
-        <minimumHdrPercentOfScreen>0.1</minimumHdrPercentOfScreen>
+        <minimumHdrPercentOfScreen>0.0</minimumHdrPercentOfScreen>
+
+        <sdrHdrRatioMap>
+            <point>
+                <sdrNits>1.0</sdrNits>
+                <hdrRatio>4.926</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>799.5703</sdrNits>
+                <hdrRatio>4.926</hdrRatio>
+            </point>
+        </sdrHdrRatioMap>
 
         <minimumLux>10000</minimumLux>
         <timing>
@@ -271,4 +282,19 @@
         <timeMinSecs>60</timeMinSecs>          // Minimum time remaining required to switch
         </timing>                              //   HBM on for.
     </highBrightnessMode>
+    <hdrBrightnessConfig>
+        <brightnessMap>
+            <point>
+                <first>0.0</first>
+                <second>1.0</second>
+            </point>
+        </brightnessMap>
+        <brightnessIncreaseDebounceMillis>0</brightnessIncreaseDebounceMillis>
+        <brightnessDecreaseDebounceMillis>0</brightnessDecreaseDebounceMillis>
+        <screenBrightnessRampIncrease>0.917993</screenBrightnessRampIncrease>
+        <screenBrightnessRampDecrease>0.171359</screenBrightnessRampDecrease>
+        <minimumHdrPercentOfScreenForNbm>0.0</minimumHdrPercentOfScreenForNbm>
+        <minimumHdrPercentOfScreenForHbm>0.0</minimumHdrPercentOfScreenForHbm>
+        <allowInLowPowerMode>false</allowInLowPowerMode>
+    </hdrBrightnessConfig>
 </displayConfiguration>

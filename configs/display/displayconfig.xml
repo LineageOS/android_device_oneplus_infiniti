@@ -297,4 +297,6 @@
         <minimumHdrPercentOfScreenForHbm>0.0</minimumHdrPercentOfScreenForHbm>
         <allowInLowPowerMode>false</allowInLowPowerMode>
     </hdrBrightnessConfig>
+    <ambientLightHorizonLong>2000</ambientLightHorizonLong>
+    <ambientLightHorizonShort>500</ambientLightHorizonShort>
 </displayConfiguration>

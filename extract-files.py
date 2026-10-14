@@ -76,13 +76,19 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'odm/lib64/soundfx/libOplusSpatializerAidl.so': blob_fixup()
         .add_needed('libbase.so'),
+    (
+        'odm/lib64/camera.oemlayer.healthmonitor.so',
+        'odm/lib64/camera.oemlayer.logger.so',
+        'odm/lib64/camera.oemlayer.uilayer.so',
+    ): blob_fixup()
+        .replace_needed('vendor.oplus.hardware.charger-V8-ndk.so', 'vendor.oplus.hardware.charger-V9-ndk.so'),
     'vendor/etc/libnfc-nci.conf': blob_fixup()
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
-    (
-        'vendor/lib64/camera/components/com.qti.node.dewarp.so',
-        'vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so',
-    ): blob_fixup()
+    'vendor/lib64/camera/components/com.qti.node.dewarp.so': blob_fixup()
         .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so'),
+    'vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so': blob_fixup()
+        .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so')
+        .replace_needed('vendor.qti.hardware.camera.offlinecamera-V2-ndk.so', 'vendor.qti.hardware.camera.offlinecamera-V3-ndk.so'),
     (
         'vendor/lib64/camera/components/com.qti.node.fd.so',
         'vendor/lib64/hw/camera.qcom.core.so',

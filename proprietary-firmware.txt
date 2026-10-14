@@ -8,6 +8,7 @@ bluetooth.img;AB
 cpucp.img;AB
 cpucp_dtb.img;AB
 devcfg.img;AB
+dcp.img;AB
 dsp.img;AB
 engineering_cdt.img;AB
 featenabler.img;AB

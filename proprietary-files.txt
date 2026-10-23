@@ -962,6 +962,7 @@ odm/lib64/camera/libpdCustomParam_Cam2.bin
 odm/lib64/camera/libpdCustomParam_Cam3.bin
 odm/lib64/camera/revision.txt
 odm/lib64/face_ree_model/faceunlock.model
+odm/lib64/hw/camera.oemlayer.v2.so
 odm/lib64/bm6a81v04s14n02.bin
 odm/lib64/bm6a81v04s14n05.bin
 odm/lib64/bm6a81v04s14n06.bin

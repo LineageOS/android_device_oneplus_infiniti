@@ -77,12 +77,6 @@ blob_fixups: blob_fixups_user_type = {
     'odm/lib64/soundfx/libOplusSpatializerAidl.so': blob_fixup()
         .add_needed('libbase.so')
         .patch_file('blob-patches/libOplusSpatializerAidl.py'),
-    (
-        'odm/lib64/camera.oemlayer.healthmonitor.so',
-        'odm/lib64/camera.oemlayer.logger.so',
-        'odm/lib64/camera.oemlayer.uilayer.so',
-    ): blob_fixup()
-        .replace_needed('vendor.oplus.hardware.charger-V8-ndk.so', 'vendor.oplus.hardware.charger-V9-ndk.so'),
     'odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini': blob_fixup()
         .regex_replace(r'(wlm_latency_flags_ultralow =)0x180d83', r'\g<1>0x180c82'),
     'vendor/etc/libnfc-nci.conf': blob_fixup()

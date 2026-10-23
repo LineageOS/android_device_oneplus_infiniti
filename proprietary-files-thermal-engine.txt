@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 15 (CPH2745_16.0.10.601(EX01)).
+## are from OnePlus 15 (CPH2745_17.0.0.102(EX01)).
 
 # Thermal engine
 odm/etc/temperature_profile/sys_thermal_control_config.xml

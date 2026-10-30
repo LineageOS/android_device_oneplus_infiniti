@@ -78,10 +78,16 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('vendor.qti.hardware.camera.offlinecamera-V2-ndk.so', 'vendor.qti.hardware.camera.offlinecamera-V3-ndk.so'),
     (
         'vendor/lib64/camera/components/com.qti.node.fd.so',
-        'vendor/lib64/hw/camera.qcom.core.so',
         'vendor/lib64/libcamxdumpinforecorder.so',
     ): blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v36.so'),
+    'vendor/lib64/hw/camera.qcom.core.so': blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v36.so')
+        # Don't publish android.control.availableHighSpeedVideoConfigurations
+        .binary_regex_replace(
+            rb'\x23\x00\x01\x00(?=\x24\x00\x01\x00\x25\x00\x01\x00\x26\x00\x01\x00\x27\x00\x01\x00\x29\x00\x01\x00)',
+            b'\x24\x00\x01\x00',
+        ),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

@@ -49,7 +49,7 @@ odm/lib64/libtfa98xx.so
 odm/etc/audio/OcaiConfig.xml
 odm/etc/audio/dcunet_nbf.onnx.mnn
 odm/etc/audio/oprec_nn_ve.mnn
-odm/etc/mixer_paths.xml
+odm/etc/mixer_paths.xml:vendor/etc/audio/sku_canoe/mixer_paths_canoe_mtp.xml;TRYSRCFIRST
 odm/etc/resourcemanager.xml
 odm/etc/usecaseKvManager.xml
 

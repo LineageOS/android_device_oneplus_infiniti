@@ -1,0 +1,14 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Display
+on property:persist.sys.sf.native_mode=301
+    write /sys/kernel/oplus_display/seed 101
+
+on property:persist.sys.sf.native_mode=303
+    write /sys/kernel/oplus_display/seed 102
+
+on property:persist.sys.sf.native_mode=307
+    write /sys/kernel/oplus_display/seed 100

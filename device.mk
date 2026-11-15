@@ -22,6 +22,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946903293830803.xml \
     $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946982335253651.xml
 
+PRODUCT_PACKAGES += \
+    init.oplus.infiniti.rc
+
 # Keymint
 PRODUCT_PACKAGES += \
     android.hardware.security.keymint3-service.strongbox.nxp \

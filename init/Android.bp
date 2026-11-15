@@ -1,0 +1,11 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "init.oplus.infiniti.rc",
+    src: "init.oplus.infiniti.rc",
+    sub_dir: "init",
+    device_specific: true,
+}

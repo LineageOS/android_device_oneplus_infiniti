@@ -260,6 +260,27 @@
         </point>
     </screenBrightnessMap>
 
+    <!-- Stock temperature limit nits at the skin thermal status thresholds -->
+    <thermalThrottling>
+        <brightnessThrottlingMap>
+            <brightnessThrottlingPoint>
+                <!-- 400 nits -->
+                <thermalStatus>light</thermalStatus>
+                <brightness>0.729671</brightness>
+            </brightnessThrottlingPoint>
+            <brightnessThrottlingPoint>
+                <!-- 350 nits -->
+                <thermalStatus>severe</thermalStatus>
+                <brightness>0.686832</brightness>
+            </brightnessThrottlingPoint>
+            <brightnessThrottlingPoint>
+                <!-- 100 nits -->
+                <thermalStatus>critical</thermalStatus>
+                <brightness>0.388179</brightness>
+            </brightnessThrottlingPoint>
+        </brightnessThrottlingMap>
+    </thermalThrottling>
+
     <highBrightnessMode enabled="true">
         <transitionPoint>0.858539</transitionPoint>
         <minimumHdrPercentOfScreen>0.1</minimumHdrPercentOfScreen>
